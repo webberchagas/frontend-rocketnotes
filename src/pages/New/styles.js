@@ -38,7 +38,7 @@ export const Form = styled.form`
             font-weight: 500;
         }
 
-        a {
+        button {
             font-size: 2rem;
             color: ${({ theme }) => theme.COLORS.GRAY_100};
         }

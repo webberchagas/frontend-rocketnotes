@@ -14,7 +14,7 @@ import { ButtonText } from '../../components/ButtonText';
 export function Home(){
     const [tags, setTags] = useState([]);
     const [tagsSelected, setTagsSelected] = useState([]);
-    const [search, setSearch] = useState([]);
+    const [search, setSearch] = useState("");
     const [notes, setNotes] = useState([]);
     const navigate = useNavigate();
 
@@ -23,7 +23,6 @@ export function Home(){
             return setTagsSelected([]);
         }
 
-        
         const alredySelected = tagsSelected.includes(tagName);
 
         if(alredySelected){
@@ -32,7 +31,7 @@ export function Home(){
         }else {
             setTagsSelected(prevState => [...prevState, tagName]);
         }
-    }
+    }   
 
     function handleDetails(id){
         navigate(`/details/${id}`);
@@ -91,7 +90,7 @@ export function Home(){
                 <Input 
                     placeholder="Pesquisar pelo título" 
                     onChange={e => setSearch(e.target.value)}
-                />
+                />  
             </Search>
 
             <Content>
@@ -102,7 +101,7 @@ export function Home(){
                                 key={String(note.id)} 
                                 data={note}
                                 onClick={() => handleDetails(note.id)}
-                            />
+                            />      
                         ))
                     }
                 </Section>

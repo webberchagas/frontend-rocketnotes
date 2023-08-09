@@ -6,7 +6,7 @@ export function Button({ title, loading = false, ...rest }) {
         <Container 
             type='button'
             disabled={loading}
-            {...rest}
+            {...rest}       
         >
             { loading ? "Carregando" : title }
         </Container>

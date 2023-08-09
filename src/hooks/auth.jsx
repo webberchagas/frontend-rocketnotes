@@ -7,7 +7,7 @@ export const AuthContext = createContext({});
 function AuthProvider({ children }){
     const [ data, setData ] = useState({});
 
-    async function signIn({ email, password}){
+    async function signIn({ email, password }){
         
         try {
             const response = await api.post('/sessions', { email, password });
@@ -16,8 +16,8 @@ function AuthProvider({ children }){
             localStorage.setItem('@rocketnotes:user', JSON.stringify(user));
             localStorage.setItem('@rocketnotes:token', token);
 
-            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-            setData({ user, token })
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`
+            setData({ user, token });
 
         } catch (error) {
             if(error.response){
@@ -48,7 +48,7 @@ function AuthProvider({ children }){
 
             await api.put('/users', user);
             localStorage.setItem('@rocketnotes:user', JSON.stringify(user));
-            setData({ user, token: data.token});
+            setData({ user, token: data.token });
 
             alert('Perfil atualizado!')
         } catch (error) {

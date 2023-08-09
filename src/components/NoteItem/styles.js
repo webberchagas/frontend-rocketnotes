@@ -5,10 +5,10 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    background-color: ${({ theme, isNew}) => isNew ? 'transparent' : theme.COLORS.BACKGROUND_900};
+    background-color: ${({ theme, isNew }) => isNew ? 'transparent' : theme.COLORS.BACKGROUND_900};
     color: ${({ theme }) => theme.COLORS.WHITE};
 
-    border: ${({ theme, isNew}) => isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : 'none'};
+    border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : 'none'};
     border-radius: 10px;
 
     margin-bottom: 8px;

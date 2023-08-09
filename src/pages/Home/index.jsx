@@ -26,7 +26,7 @@ export function Home(){
         const alredySelected = tagsSelected.includes(tagName);
 
         if(alredySelected){
-            const filteredTags = tagsSelected.filter( tag => tag !== tagName);
+            const filteredTags = tagsSelected.filter(tag => tag !== tagName);
             setTagsSelected(filteredTags);
         }else {
             setTagsSelected(prevState => [...prevState, tagName]);

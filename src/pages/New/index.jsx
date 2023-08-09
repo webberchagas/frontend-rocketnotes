@@ -34,7 +34,7 @@ export function New(){
     }
 
     function handleRemoveLink(deleted){
-        setLinks(prevState => prevState.filter( link => link !== deleted));
+        setLinks(prevState => prevState.filter(link => link !== deleted));
     }
 
     function handleAddTag(){
@@ -43,7 +43,7 @@ export function New(){
     }
 
     function handleRemoveTag(deleted){
-        setTags(prevState => prevState.filter( tag => tag !== deleted));
+        setTags(prevState => prevState.filter(tag => tag !== deleted));
     }
 
     async function handleNewNote(){
